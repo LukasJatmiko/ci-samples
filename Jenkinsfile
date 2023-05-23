@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                dir('<your-project-folder>'){
-                    sh 'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon katalonc.sh -projectPath=/tmp/project -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest" -apiKey=<your-api-key>'
+                dir('/home/lukas/learn/ci-samples'){
+                    sh 'docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon katalonc.sh -projectPath=/tmp/project -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest" -apiKey=61c66c45-d573-4a7c-9cf8-24c219dd3f48'
                 }
             }
         }
